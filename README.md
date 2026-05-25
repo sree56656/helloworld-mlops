@@ -11,3 +11,9 @@ import pandas as pd
 
 train.py - to build the model which creates model.pkl
 run_model.py - execute/evaluate the model 
+app.py - to use the model
+======
+
+**To use the model:**
+curl -X POST "http://127.0.0.1:5001/predict" -H "Content-Type: application/json" -d '{"features":[10,1,5,2]}'
+{"prediction":1}
