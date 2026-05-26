@@ -24,6 +24,13 @@ MLOps egineers help:
     1. Data engineers - to train and saving the model
     2. ML engineers - Deploying the model
 
+ML engineers - create APIs to integrate with backend
+MLOps engineers - 
+  1. containerize
+  2. Iac - VM, k8s etc
+  3. k8s manifests
+  4. k8s - n/w, LB, security, API Gateway etc.,
+
 ================
 
 MLOps - Course notes
