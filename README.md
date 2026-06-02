@@ -110,3 +110,37 @@ steps:
         $ kubectl get pods -n mlflow -w
             1. init container = verify if the connection established with postgres
             2. mlflow container
+
+================================ Model deployment and model serving
+
+making the trained model avaqilable to users
+
+prob defn - data collection - data cleaning - feature eng - model selection - model training - model evaluation - hyper p tuning - deploying - observing
+
+Deployment steps:
+    1. packaging model (.pkl, containerization)
+    2. pushing to registry
+    3. deploying
+        model serving is also a part of deployment
+            1. Runtime server
+            2. enough resources
+            3. API available to users
+            4. Ingress
+            5. LB
+            6. Auto scaling
+            7. CDN etc.,
+
+
+=============== popular ways to deploy and serve models using VMs
+
+1. Data scientist creates model(creates scripts to create model) 
+2. ML engineers create backed to this model (develop APIs using flask/fastapi)
+    strategy-1 (VMs):
+        ML engineers run the scripts creates artifacts and stores in VMs - /predicts - MLOPs engineers creates wsgi -> LB with in VPC
+    strategy-2 (k8s): 
+        k8s - containers - pod - svc - ingress
+    stratrgy-3 (managed MLOps): 
+        amazon sagemaker (no infra required for model deployment and serving)
+    strategy-4: kserve(k8s/cloud native approach)
+        it uses CRDs(custom resource defns) with this we can offload lot of k8s setups
+3. model deployment 
