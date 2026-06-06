@@ -162,3 +162,5 @@ Deployment steps:
     9. ASG ( and assiciate with TG )
     ALB -> TG -> ASG (VMs created though ASG)
 
+    listener rule -> ALB -> target group
+
