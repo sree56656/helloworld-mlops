@@ -145,7 +145,8 @@ Deployment steps:
         it uses CRDs(custom resource defns) with this we can offload lot of k8s setups
 3. model deployment
 
-**** ============= Order to create resources\
+* ============= Order to create resources  
+
     1. VPC  
     2. subnets in vpc  
         when ALB should be associated with 2 diff subnets in diff AZ  
@@ -164,3 +165,23 @@ Deployment steps:
 
     listener rule -> ALB -> target group  
 
+** kserve
+1. It helps MLOps engineers in  
+           deploying  
+           serving  
+           inferencing
+
+2. as of now we have done manual activities
+       flask app
+       wsgi
+       nginx
+       deploy
+       ASG
+       LB
+
+3. Kserve - CRD (.pkl file location) - it deploys in 2-3 mins
+4. it works with all kind of frameworks - scikit-learn(.pkl)  
+                                           tenorflow  
+                                           xgboost  
+                                           pytorch
+5. It also supports autoscaling it supports knative/keda under the hood
