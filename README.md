@@ -145,22 +145,22 @@ Deployment steps:
         it uses CRDs(custom resource defns) with this we can offload lot of k8s setups
 3. model deployment
 
-============= Order to create resources
-    1. VPC
-    2. subnets in vpc
-        when ALB should be associated with 2 diff subnets in diff AZ
-        to make subnets public - dest route associated with igw
-    3. IGW
-    4. Route table (create route with in route associate the destination through igw)
-        attach route tables to subnets
-    5. security group(port 22 and 80)
+**** ============= Order to create resources\
+    1. VPC  
+    2. subnets in vpc  
+        when ALB should be associated with 2 diff subnets in diff AZ  
+        to make subnets public - dest route associated with igw  
+    3. IGW  
+    4. Route table (create route with in route associate the destination through igw)  
+        attach route tables to subnets  
+    5. security group(port 22 and 80)  
         if any issue with model deployment we need to login to VM and trouble shoot issue
-        attach SG to subnets
-    6. launch template
-    7. target group
-    8. ALB
-    9. ASG ( and assiciate with TG )
-    ALB -> TG -> ASG (VMs created though ASG)
+        attach SG to subnets  
+    6. launch template  
+    7. target group  
+    8. ALB  
+    9. ASG ( and assiciate with TG )  
+    ALB -> TG -> ASG (VMs created though ASG)  
 
-    listener rule -> ALB -> target group
+    listener rule -> ALB -> target group  
 
